@@ -113,3 +113,11 @@ $ sqlite> SELECT name FROM movies WHERE name LIKE "car %";
 
 2. BIRTHYEAR
 =============
+*Find all movies made in the year you were born.
+
+$ sqlite> 
+  SELECT id, name, rank,year
+  FROM movies 
+  WHERE year LIKE 1900
+
+
