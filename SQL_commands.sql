@@ -122,6 +122,7 @@ $ sqlite>
 
 3. 1982
 ==========
+aggregation
 *find out how many movies does our dataset have for the year 1982?
 *AVG() - Returns the average value
 *COUNT() - Returns the number of rows
@@ -135,7 +136,6 @@ $ sqlite>
 # not sure yet
 SELECT name, rank, year, id,COUNT(year)
 FROM movies
-WHERE year = 1982
-GROUP BY rank;
+WHERE year = 1982;
 
 
