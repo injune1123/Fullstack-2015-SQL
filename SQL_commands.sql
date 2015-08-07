@@ -22,11 +22,14 @@ CONFIGURE
 SET UP A DATABESE
 ===================
 $sqlite3 imdb_test.sqlite.db
-$.help
->>> many details abou the database
+$sqlite> .help
+>>> many details about the database
 
 CREATE TABLE
 ===================
+sqlite> .tables
+sqlite> .schema
+sqlite> .shcema + tablenames
 
 * create a table named movies with four columns (id, name year, rank)
 $ CREATE TABLE movies (
@@ -63,6 +66,9 @@ $INSERT INTO actors (id,first_name, last_name, gender) VALUES(1,"Mel(I)","Gibson
 * add a row of information into the roles table, to connect the movie and actor
 INSERT INTO roles (actor_id, movie_id,role_name) VALUES(1,1,"William Wallace");
 
+CHECK THE DATABASE 
+====================
+$ 
 SEED THE DATABASE(DOWNLOAD AN EXISTING DATABASE)
 ==================================================
 * download the SQlite from "https://drive.google.com/file/d/0B7NmZ0tnvX6TZDgzcEVYWjhnWEU/view"
@@ -132,7 +138,7 @@ $ sqlite>
 *MIN() - Returns the smallest value
 *SUM() - Returns the sum
 
-$ sqlite>
+$ sqlite> 
 SELECT name, rank, year, id,COUNT(year)
 FROM movies
 WHERE year = 1982;
@@ -140,12 +146,10 @@ WHERE year = 1982;
 4.Stacktors
 ============
 * Find actors who have "stack" in their last name.
-CREATE TABLE "actors" (
-  "id" int(11) NOT NULL DEFAULT '0',
-  "first_name" varchar(100) DEFAULT NULL,
-  "last_name" varchar(100) DEFAULT NULL,
-  "gender" char(1) DEFAULT NULL,
-  PRIMARY KEY ("id")
-);
 
- SELECT name FROM movies WHERE name LIKE "car %";
+$ sqlite> 
+SELECT id,first_name, last_name,gender 
+FROM actors 
+WHERE last_name LIKE "%stack%";
+
+5.Fame Name Game
