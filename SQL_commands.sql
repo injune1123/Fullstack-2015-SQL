@@ -122,7 +122,7 @@ $ sqlite>
 
 3. 1982
 ==========
-aggregation
+* use aggregation
 *find out how many movies does our dataset have for the year 1982?
 *AVG() - Returns the average value
 *COUNT() - Returns the number of rows
@@ -133,9 +133,19 @@ aggregation
 *SUM() - Returns the sum
 
 $ sqlite>
-# not sure yet
 SELECT name, rank, year, id,COUNT(year)
 FROM movies
 WHERE year = 1982;
 
+4.Stacktors
+============
+* Find actors who have "stack" in their last name.
+CREATE TABLE "actors" (
+  "id" int(11) NOT NULL DEFAULT '0',
+  "first_name" varchar(100) DEFAULT NULL,
+  "last_name" varchar(100) DEFAULT NULL,
+  "gender" char(1) DEFAULT NULL,
+  PRIMARY KEY ("id")
+);
 
+ SELECT name FROM movies WHERE name LIKE "car %";
