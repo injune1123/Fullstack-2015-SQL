@@ -120,4 +120,22 @@ $ sqlite>
   FROM movies 
   WHERE year LIKE 1900
 
+3. 1982
+==========
+*find out how many movies does our dataset have for the year 1982?
+*AVG() - Returns the average value
+*COUNT() - Returns the number of rows
+*FIRST() - Returns the first value
+*LAST() - Returns the last value
+*MAX() - Returns the largest value
+*MIN() - Returns the smallest value
+*SUM() - Returns the sum
+
+$ sqlite>
+# not sure yet
+SELECT name, rank, year, id,COUNT(year)
+FROM movies
+WHERE year = 1982
+GROUP BY rank;
+
 
